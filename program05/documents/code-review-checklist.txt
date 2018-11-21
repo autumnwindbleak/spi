@@ -1,0 +1,13 @@
+[ ] Is the code cover the design?
+[ ] Is all the variables initialed?
+[ ] Is all the methods initialed?
+[ ] Is the logical structure inisialed correctly?
+[ ] Is the coding standard correctly?
+[ ] Is the unexpected input situation initialized? (OOPS! for example)
+[ ] Is the spelling of each variables and method name right?
+[ ] Is the calculation equation correct?
+[ ] Is all the exception catched?
+[ ] Is the speciall class checked according to the design?
+[ ] Is all the "{" "}" have a single line?
+[ ] Is the TAB and SPACE used correctly?
+[ ] Is the comment place before each method and variable?

@@ -1,0 +1,2 @@
+Mean 3.00
+StdDev 0.00

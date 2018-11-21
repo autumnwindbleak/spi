@@ -1,0 +1,12 @@
+[ ] Is the disgin covered the requirment?
+[ ] Is each the method have a description?
+[ ] Is all the exception is consider? (IO exception for example)
+[ ] Is the structure of the program clearly shown?
+[ ] Is every method function well with expected input?
+[ ] Is every method function well with unexpected input?
+[ ] Is the logic correct?
+[ ] Is there special class need to be consider? ( divide by 0 for example)
+[ ] Is the types of the variables and parameters correct? (double int for example)
+[ ] Is every loop have a ending state?
+[ ] Is every array not over limmit when reading?
+[ ] Is all variables will be different from each other? ( globle and private varibale have the same name for example) 

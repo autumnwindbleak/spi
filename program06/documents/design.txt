@@ -1,0 +1,42 @@
+package
+
+import tokens.java 
+import program05.java
+
+variables
+double d; //set default as 0.5
+double E; //set 0.000001 as defalt, if not enough then change it.
+double dof; 
+double x; //set 0.5 as default, change if it is not good
+double p;
+
+input function
+read()
+{
+	read from system.in and put p and dof into global vars
+}
+
+output function
+
+print()
+{
+	print out the result in format
+}
+
+calculate function
+
+calculate()
+{
+	create a program05 object as cal_p;
+	while(result is acceptable according to e)
+	{
+		calculate temp_p cal_p.p(x);
+		if (temp_p > p or temp_p < p)
+		{
+			if last time (temp_p - p) have change from above 0 to below  or below 0 to above 0 
+				d = d / 2;  
+			lower x by d or higher x by d;
+		}
+		
+	}
+}

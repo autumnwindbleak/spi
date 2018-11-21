@@ -1,0 +1,27 @@
+variables
+int seg_num (even)
+double E;
+double dof
+double x
+
+gamafunction
+double gama(double x){}
+
+t distribution function
+double T_dis(double x){}
+
+sum function use to calculate the sum eqution in function P
+double sum(boolean even, int seg_sum, double W)
+
+P function 
+double p()
+{
+  while(distance between temp and p > E)
+	{
+		calculate p;
+	}
+}
+
+read and print function
+void read(){}
+void print(double result) {}

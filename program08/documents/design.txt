@@ -1,0 +1,54 @@
+prgram08.java
+
+
+import matrix.java
+import tokens.java 
+import program05.java
+import program06.java
+	
+SET program05
+SET program06
+SET Wk
+SET Xk;
+SET Yk;
+SET Zk;
+SET n;
+SET range;
+SET beta0;
+SET beta1;
+SET beta2;
+SET beta3;
+
+METHOD calculate
+	build the matrix first
+	solve matrix
+END METHOD
+
+METHOD READ
+	read from input
+END METHOD
+	
+METHOD PRINT
+	PRINT all the result in format.
+END METHOD
+
+METHOD Main
+	caculate()
+	print()
+END METHOD
+
+
+
+matrix.java
+SET matrix[][];
+
+METHOD matrix(double[][] matrix)
+	constructor;
+END METHOD
+
+METHOD solve(matrix b)
+	use gass method solve the matrix and return result
+END METHOD
+
+
+

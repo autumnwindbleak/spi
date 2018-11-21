@@ -1,0 +1,45 @@
+prgram09.java
+
+import tokens.java 
+	
+SET data
+SET order;
+
+METHOD sort
+	set default var value
+END METHOD
+
+METHOD quicksort
+	find the pointer value's position
+	quicksort pointer's left and right
+END METHOD
+
+METHOD READ
+	read from input
+END METHOD
+	
+METHOD PRINT
+	PRINT all the result in format.
+END METHOD
+
+METHOD Main
+	read()
+	caculate()
+	print()
+END METHOD
+
+
+
+matrix.java
+SET matrix[][];
+
+METHOD matrix(double[][] matrix)
+	constructor;
+END METHOD
+
+METHOD solve(matrix b)
+	use gass method solve the matrix and return result
+END METHOD
+
+
+

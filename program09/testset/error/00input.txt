@@ -1,0 +1,11 @@
+hello
+	this is a test file
+Containing
+01 line
+02 lines
+3 lines
+4 linesA
+of text
+In some order
+that we will
+be sorting

@@ -1,0 +1,2 @@
+Class testset/java/example, items 4, size 38
+Total Size: 38

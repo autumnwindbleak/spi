@@ -1,0 +1,55 @@
+
+import tokens.java 
+import program05.java
+import program03.java
+import program06.java
+	
+SET program05
+SET program03
+SET program06
+SET Rxy = 0;
+SET RSQ = 0;
+SET Beta0 = 0;
+SET Beta1 = 0;
+SET yk = 0;
+SET Tail = 0;
+SET sigma = 0;
+SET Range = 0;
+SET UPI = 0;
+SET LPI = 0;
+
+METHOD calculate
+	readfile by program03
+	SET expectp = 0;
+	COMPUTE Rxy,RSQ,Beta0,Beta1,yk
+	COMPUTE p by program05
+	COMPUTE Tail = 1-2*p
+	COMPUTE sigma = sqrt(1/(n-2)*sum1(Yi-Beta0-Beta1*Xi) 
+	COMPUTE expectx by program06
+	COMPUTE Range = expectp * sigma * sqrt(1+1/n+(Xk-Xavg)*(Xk-Xavg)/sum2((Xi-Xavg)*(Xi-Xavg)))
+	COMPUTE UPI = Yk + Range
+	COMPUTE LPI = Yk - Range
+END METHOD
+
+METHOD sum1
+	SET sum1 = 0;
+	WHILE( i < n)
+		COMPUTE sum1 = sum1 + Yi-Beta0-Beta1*Xi)
+	RETURN sum1;
+END METHOD
+
+METHOD sum2
+	SET sum2 = 0;
+	WHILE(i < n)
+		COMPUTE sum2 = sum2 + (Xi-Xavg)*(Xi-Xavg)
+	RETURN sum2;
+END METHOD
+	
+METHOD PRINT
+	PRINT all the result in format.
+END METHOD
+
+METHOD Main
+	caculate()
+	print()
+END METHOD

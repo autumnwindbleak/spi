@@ -1,0 +1,65 @@
+""rameterise the program name so we can reuse the script
+PROGRAM=programXX
+
+# make sure we are just above the testset directory
+if [ -d ../testset ] ; then cd .. ; fi
+
+COMPILEIT()
+{
+		echo -n "javac ${1}.java"
+		if javac ${1}.java >& saved-output ; then
+				echo " ...  compiled"
+		else
+				echo " ... did not compile:"
+				cat saved-output
+				echo
+		fi
+}
+
+TESTIT()
+{
+		prog=${1}
+		args=${2:0:${#2}-9}arguments.txt
+		infile=${2}
+		outfile=${2:0:${#2}-9}output.txt
+
+		if [ -f ${args} ] ; then
+				args=`cat ${args}`
+		else
+				args=""
+		fi
+
+		# now run the program and capture the output
+		echo -n java ${prog} ${args} "<" ${infile}  " ... "
+
+		if java ${prog} ${args} < ${infile} >& prog-output ; then
+				# the program did not exit badly - check output with diff -w
+				if diff -w ${outfile} prog-output >& saved-output ; then
+						echo correct output.
+				else
+						echo wrong output:
+						cat saved-output
+				fi
+		else
+				# the program died badly - there may not be any output:
+				echo program crashed:
+		fi
+		echo "----------------"
+
+}
+
+echo
+echo "Testing ${PROGRAM}.java"
+echo
+COMPILEIT ${PROGRAM}
+echo
+echo Valid Input Tests
+for i in testset/valid/??input.txt ; do
+		TESTIT ${PROGRAM} ${i}
+done
+echo
+echo Error Tests
+for i in testset/error/??input.txt ; do
+		TESTIT ${PROGRAM} ${i}
+done
+

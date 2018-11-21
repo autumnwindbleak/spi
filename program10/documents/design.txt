@@ -1,0 +1,61 @@
+prgram10.java
+
+import tokens.java 
+	
+SET data
+SET order
+SET R
+SET T
+SET S
+SET K
+SET field
+SET split
+
+
+METHOD parameter
+	IF -r THEN R = true;
+	IF -s THEN S = ture;
+	IF -k THEN K = ture;
+	IF -t THEN T = ture;
+	split = the char after -t
+	field = the integer after -k
+	IF S,T,K are not the same value THEN ops
+	IF field is not complete THEN ops
+END METHOD
+
+METHOD compare
+	IF R THEN return value reverse
+	IF !S THEN normal compare use String.compareTo
+	ELSE
+		find compare field
+		use String.compareTo compare
+		IF equal THEN find the next field and compare
+		IF all the field are the same THEN regard as first string is bigger
+
+END METHOD
+
+METHOD sort
+	set default var value
+END METHOD
+
+METHOD quicksort
+	find the pointer value's position
+	quicksort pointer's left and right
+END METHOD
+
+METHOD READ
+	read from input
+END METHOD
+	
+METHOD PRINT
+	PRINT all the result in format.
+END METHOD
+
+METHOD Main
+	parameter();
+	read()
+	caculate()
+	print()
+END METHOD
+
+
